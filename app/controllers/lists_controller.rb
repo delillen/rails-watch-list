@@ -5,11 +5,11 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
-  def show
-  end
-
   def new
     @list = List.new
+  end
+
+  def show
   end
 
   def create

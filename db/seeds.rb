@@ -30,7 +30,7 @@ results = data["results"]
 results.each do |result|
   movie = Movie.new(title: result["original_title"],
                     overview: result["overview"],
-                    rating: result["vote_average"])
-  movie.photo.attach(io: file, filename: result["poster_path"], content_type: "image/png")
+                    rating: result["vote_average"],
+                    poster_url: result["poster_path"])
   movie.save
 end
